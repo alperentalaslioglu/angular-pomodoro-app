@@ -24,17 +24,19 @@ app.controller('TimerController',['$scope','$interval',function($scope,$interval
     // stops any running interval to avoid two intervals running at the same time
     $scope.stop();
     // timer promise
-    timer = $interval(function() {
-      $scope.counter--;
-      $scope.progress = $scope.counter / $scope.initVal;
-      if($scope.counter === 0){
-        $scope.stop();
-        $scope.progress = 1;
-        var audio = new Audio('assets/sound/bell.mp3');
-        audio.play();
-        $scope.updateCounters();
-      }
-    }, 1000);
+    if($scope.counter > 0){
+      timer = $interval(function() {
+        $scope.counter--;
+        $scope.progress = $scope.counter / $scope.initVal;
+        if($scope.counter === 0){
+          $scope.stop();
+          $scope.progress = 1;
+          var audio = new Audio('assets/sound/bell.mp3');
+          audio.play();
+          $scope.updateCounters();
+        }
+      }, 1000);
+    }
   };
 
   // stops the timer
