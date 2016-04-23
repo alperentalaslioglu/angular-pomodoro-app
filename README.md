@@ -2,7 +2,7 @@
 
 Yet Another Implementation of Pomodoro Timer in AngularJS 1.5.5
 
-Demo : https://www.brainbashers.com/tents.asp
+Demo : https://embed.plnkr.co/gIEPSApNPTsmiOJLPoUA/
 
 Screnshots :
 
