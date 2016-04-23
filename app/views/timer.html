@@ -1,0 +1,38 @@
+<div id="app">
+
+  <h1> Pomodoro Clock </h1>
+
+  <div id="timer">
+    {{counter | timeFilter}}
+  </div>
+
+  <timer-counter
+      size="{{ size }}"
+      stroke="{{ stroke }}"
+      stroke-width="{{ strokeWidth }}"
+      complete="progress"
+      background="{{ background }}"
+      counter-clockwise="{{ counterClockwise }}"
+      timer="{{counter | timeFilter}}"
+      >
+  </timer-counter>
+
+  <div id="timer-function-buttons">
+    <a ng-click="stop()"> <img src="assets/img/pause.png" /> </a>
+    <a ng-click="start()"> <img src="assets/img/start.png" /> </a>
+    <a ng-click="reset()"> <img src="assets/img/reset.png" /> </a>
+  </div>
+
+  <div id="pomodoro-buttons">
+    <a ng-click="startTimer(25,'pomodoro')"> Pomodoro </a>
+    <a ng-click="startTimer(5,'short-break')"> Short Break </a>
+    <a ng-click="startTimer(15,'long-break')"> Long Break </a>
+  </div>
+
+  <div id="pomodoro-situation">
+    <p ng-show="takenPomodoros > 0"> {{takenPomodoros}} pomodoro(s) is completed! </p>
+    <p ng-show="takenShortBreaks > 0"> {{takenShortBreaks}} short break(s) is completed! </p>
+    <p ng-show="takenLongBreaks > 0"> {{takenLongBreaks}} long break(s) is completed! </p>
+  </div>
+
+</div>

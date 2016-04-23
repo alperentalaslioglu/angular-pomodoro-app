@@ -1,0 +1,61 @@
+body{
+  background: #A22330;
+}
+
+#app{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  padding: 20px;
+  min-width: 500px;
+  text-align: center;
+}
+
+#app h1{
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 4rem;
+  color: #fff;
+}
+
+#timer{
+  position: absolute;
+  top:40%;
+  left:37%;
+  font-size:4rem;
+  color:#fff;
+}
+
+#timer-function-buttons{
+  margin:10px;
+}
+
+#timer-function-buttons a, #timer-function-buttons a:hover{
+  display: inline-block;;
+  cursor: pointer;
+}
+
+circle {
+  stroke-linecap: round;
+}
+
+#pomodoro-buttons{
+  margin-top: 20px;
+}
+
+#pomodoro-buttons a{
+  background-color: #fff;
+  width:50px;
+  height: 20px;
+  margin: 5px;
+  border:0px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pomodoro-situation p{
+  color: #fff;
+  font-size: 1rem;
+}
